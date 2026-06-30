@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6d1f14"/>
+      <stop offset="1" stop-color="#12343a"/>
+    </linearGradient>
+    <pattern id="b" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M0 47.5H48" stroke="#f1ddc3" stroke-opacity=".08"/>
+      <path d="M47.5 0V48" stroke="#f1ddc3" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#a)"/>
+  <rect width="1600" height="900" fill="url(#b)"/>
+  <g opacity=".6">
+    <rect x="98" y="160" width="480" height="580" rx="20" fill="#f7ead6"/>
+    <rect x="640" y="120" width="820" height="660" rx="24" fill="#fff5e8"/>
+    <rect x="160" y="228" width="356" height="28" rx="8" fill="#d4b38b"/>
+    <rect x="160" y="284" width="300" height="20" rx="8" fill="#d4b38b"/>
+    <rect x="160" y="336" width="330" height="20" rx="8" fill="#d4b38b"/>
+    <rect x="702" y="190" width="695" height="38" rx="10" fill="#ddc2a2"/>
+    <rect x="702" y="262" width="640" height="20" rx="8" fill="#d9b793"/>
+    <rect x="702" y="312" width="610" height="20" rx="8" fill="#d9b793"/>
+    <rect x="702" y="362" width="665" height="20" rx="8" fill="#d9b793"/>
+    <rect x="702" y="430" width="336" height="250" rx="14" fill="#e8d4ba"/>
+    <rect x="1060" y="430" width="336" height="250" rx="14" fill="#e8d4ba"/>
+  </g>
+</svg>

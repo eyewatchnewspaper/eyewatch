@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EyeWatch | Weekly Newspaper</title>
+    <meta
+      name="description"
+      content="EyeWatch is a weekly community newspaper covering local stories, public service updates, and inspiring voices."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container inner">
+        <a class="brand-wrap" href="/">
+          <img src="/logo.svg" width="34" height="34" alt="EyeWatch logo" />
+          <span class="brand">EyeWatch</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="/" aria-current="page">Home</a>
+          <a href="/newspapers/">Newspapers</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="content">
+          <span class="kicker">Community. Truth. Weekly.</span>
+          <h1>Your neighborhood stories, one issue at a time.</h1>
+          <p>
+            EyeWatch delivers weekly coverage that is easy to read and hard to ignore. Browse the latest publication, revisit
+            past editions, and stay connected with your community pulse.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/newspapers/">Read Latest Newspapers</a>
+            <a class="btn btn-outline" href="/about/">Learn About EyeWatch</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Latest Weekly Issues</h2>
+          <p class="section-subtitle">The four most recent publications are shown below. Open any card to read the full PDF.</p>
+          <div class="grid grid-4" data-latest-grid></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="banner">
+            <div class="content">
+              <blockquote>"A newspaper is not just pages of headlines. It is a mirror for a community and a map for its future."</blockquote>
+              <p>We believe informed readers build resilient neighborhoods.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="about-panel about-layout">
+            <div>
+              <h2 class="section-title">About EyeWatch</h2>
+              <p class="section-subtitle">
+                EyeWatch started as a small volunteer bulletin and evolved into a trusted weekly newspaper serving families,
+                schools, and local leaders. We are committed to accurate reporting and meaningful storytelling.
+              </p>
+            </div>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="/about/">Read Full About Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container inner">
+        <span>EyeWatch Weekly Newspaper</span>
+        <span>&copy; <span data-year></span> EyeWatch. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script src="/assets/js/site.js" defer></script>
+  </body>
+</html>

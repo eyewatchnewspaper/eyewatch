@@ -1,0 +1,16 @@
+{
+  "name": "eyewatch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EyeWatch newspaper website",
+  "scripts": {
+    "build": "node scripts/build-newspapers.mjs",
+    "preview": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^6.1.200"
+  }
+}

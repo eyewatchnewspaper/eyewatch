@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newspapers | EyeWatch</title>
+    <meta name="description" content="Browse EyeWatch weekly newspapers in PDF format, sorted from latest to oldest." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container inner">
+        <a class="brand-wrap" href="/">
+          <img src="/logo.svg" width="34" height="34" alt="EyeWatch logo" />
+          <span class="brand">EyeWatch</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/newspapers/" aria-current="page">Newspapers</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h1 class="section-title">Weekly Newspaper Archive</h1>
+        <p class="section-subtitle">
+          Published every week with volume, number, and date. Cards are sorted by date in descending order.
+        </p>
+        <section class="filter-panel" aria-label="Newspaper filters">
+          <div class="filter-grid">
+            <label class="filter-field">
+              <span>Volume</span>
+              <input type="number" min="1" step="1" placeholder="Any" data-filter-volume />
+            </label>
+            <label class="filter-field">
+              <span>Number</span>
+              <input type="number" min="1" step="1" placeholder="Any" data-filter-number />
+            </label>
+            <label class="filter-field">
+              <span>Date</span>
+              <input type="date" data-filter-date />
+            </label>
+            <label class="filter-field">
+              <span>Date from</span>
+              <input type="date" data-filter-date-start />
+            </label>
+            <label class="filter-field">
+              <span>Date to</span>
+              <input type="date" data-filter-date-end />
+            </label>
+          </div>
+          <div class="filter-actions">
+            <button type="button" class="btn btn-primary" data-filter-apply>Apply filters</button>
+            <button type="button" class="btn btn-secondary" data-filter-reset>Reset</button>
+          </div>
+        </section>
+        <p class="meta" data-summary>Loading newspapers...</p>
+        <div class="grid grid-4" data-papers-grid></div>
+        <div class="pagination" data-pagination></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container inner">
+        <span>EyeWatch Weekly Newspaper</span>
+        <span>&copy; <span data-year></span> EyeWatch. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script src="/assets/js/newspapers.js" defer></script>
+  </body>
+</html>
