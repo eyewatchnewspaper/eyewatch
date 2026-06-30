@@ -165,7 +165,7 @@ function renderPagination(totalPages, activePage, mount, onPage) {
 }
 
 async function loadPapers() {
-  const response = await fetch('/data/newspapers.json', { cache: 'no-store' });
+  const response = await fetch('data/newspapers.json', { cache: 'no-store' });
   if (!response.ok) {
     throw new Error('Unable to load newspaper data.');
   }
@@ -178,6 +178,10 @@ function getPageFromUrl() {
   const url = new URL(window.location.href);
   const value = Number(url.searchParams.get('page') || '1');
   return Number.isInteger(value) && value > 0 ? value : 1;
+}
+
+function withBasePath(relativePath) {
+  return new URL(relativePath, document.baseURI).href;
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -213,7 +217,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       activePage = Math.min(Math.max(1, page), totalPages);
       const start = (activePage - 1) * perPage;
       const end = start + perPage;
-      const current = filtered.slice(start, end);
+      const current = filtered.slice(start, end).map((paper) => ({
+        ...paper,
+        pdfPath: withBasePath(paper.pdfPath),
+        thumbPath: withBasePath(paper.thumbPath)
+      }));
 
       grid.innerHTML = current.length > 0 ? current.map(paperCard).join('') : '<p>No newspapers match the selected filters.</p>';
       summary.textContent = filtered.length > 0

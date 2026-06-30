@@ -385,8 +385,8 @@ async function main() {
       sortDate,
       metadataConflict: Boolean(extracted?.issueDate && fallbackDate && getYear(extracted.issueDate) !== getYear(fallbackDate)),
       filename: fileName,
-      pdfPath: `/public/newspapers/${encodeSegment(fileName)}`,
-      thumbPath: thumbRelativePath,
+      pdfPath: `public/newspapers/${encodeSegment(fileName)}`,
+      thumbPath: thumbRelativePath.replace(/^\//, ""),
       source: extracted ? extracted.source : "filename"
     });
   }

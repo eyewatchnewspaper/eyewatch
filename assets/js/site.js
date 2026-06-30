@@ -1,5 +1,5 @@
 async function fetchPapers() {
-  const response = await fetch('/data/newspapers.json', { cache: 'no-store' });
+  const response = await fetch('data/newspapers.json', { cache: 'no-store' });
   if (!response.ok) {
     throw new Error('Unable to load newspapers list.');
   }
@@ -22,6 +22,10 @@ function cardTemplate(paper) {
   `;
 }
 
+function withBasePath(relativePath) {
+  return new URL(relativePath, document.baseURI).href;
+}
+
 async function renderLatestOnHome() {
   const mount = document.querySelector('[data-latest-grid]');
   if (!mount) {
@@ -37,7 +41,13 @@ async function renderLatestOnHome() {
       return;
     }
 
-    mount.innerHTML = latest.map(cardTemplate).join('');
+    mount.innerHTML = latest
+      .map((paper) => cardTemplate({
+        ...paper,
+        pdfPath: withBasePath(paper.pdfPath),
+        thumbPath: withBasePath(paper.thumbPath)
+      }))
+      .join('');
   } catch (error) {
     mount.innerHTML = `<p>${error.message}</p>`;
   }
